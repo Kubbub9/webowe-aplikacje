@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Czapnik - wizytowka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jakub Czapnik</h1>
+        <p class="podtytul">
+            Uczen czwartej klasy technikum, kierunek technik programista. Ucze sie tworzenia aplikacji webowych.
+        </p>
+
+        <nav>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#umiejetnosci">Umiejetnosci</a>
+            <a href="#kontakt">Kontakt</a>
+            <button type="button" id="przelacznik-motywu">Ciemny motyw</button>
+        </nav>
+    </header>
+    <main>
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <p>Programowaniem zajmuje sie od trzeciej klasy. Najbardziej interesuje mnie strona serwerowa aplikacji</p>
+            <p>W wolnym czasie gram w koszykowke. Uwazam, ze dobry kod to taki, ktory da sie przeczytac po pół roku.</p>
+        </section>
+        <section id="umiejetnosci">
+            <h2>Umiejetnosci</h2>
+            <p>Lista generowana przez js:</p>
+            <ul id="lista_umiejetnosci"></ul>
+        </section>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Napisz do mnie - formularz sprawdza dane i wyswietla potwierdzenie.</p>
+            <form id="formularz-kontakt">
+                <div class="pole">
+                    <label for="imie">Imię</label>
+                    <input type="text" id="imie" name="imie" placeholder="Jak masz na imię?">
+                </div>
+
+                <div class="pole">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="adres@example.com">
+                </div>
+
+                <div class="pole">
+                    <label for="temat">Temat</label>
+                    <select id="temat" name="temat">
+                        <option value="">— wybierz —</option>
+                        <option value="wspolpraca">Współpraca</option>
+                        <option value="pytanie">Pytanie</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                </div>
+
+                <div class="pole">
+                    <label for="tresc">Wiadomość</label>
+                    <textarea id="tresc" name="tresc" rows="4"placeholder="Treść wiadomości"></textarea>
+                </div>
+
+                <button type="submit">Wyślij</button>
+            </form>
+
+            <div id="komunikat"></div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 - Jakub Czapnik. Zadanie MB3 z przedmiotu Programowanie aplikaji zaawansowanych webowych.</p>
+    </footer>
+</body>
+</html>
