@@ -16,6 +16,7 @@
         <nav>
             <a href="#o-mnie">O mnie</a>
             <a href="#umiejetnosci">Umiejetnosci</a>
+            <a href="#inspiracje-sekcja">Inspiracje</a>
             <a href="#kontakt">Kontakt</a>
             <button type="button" id="przelacznik-motywu">Ciemny motyw</button>
         </nav>
@@ -28,9 +29,26 @@
         </section>
         <section id="umiejetnosci">
             <h2>Umiejetnosci</h2>
+            <div id="filtry">
+                <button type="button" class="aktywny" data-kategoria="wszystkie">Wszystkie</button>
+                <button type="button" data-kategoria="frontend">Frontend</button>
+                <button type="button" data-kategoria="backend">Backend</button>
+                <button type="button" data-kategoria="narzedzia">Narzędzia</button>
+                <button type="button" data-kategoria="miekkie">Miękkie</button>
+            </div>
             <p>Lista generowana przez js:</p>
             <ul id="lista-umiejetnosci"></ul>
+            <p id="podsumowanie"></p>
+
         </section>
+
+        <section id="inspiracje-sekcja">
+            <h2>Inspiracje</h2>
+            <p>Osoby pobrane z publicznego API w chwili otwarcia strony:</p>
+
+            <div id="inspiracje"></div>
+        </section>
+
         <section id="kontakt">
             <h2>Kontakt</h2>
             <p>Napisz do mnie - formularz sprawdza dane i wyswietla potwierdzenie.</p>
@@ -69,6 +87,6 @@
     <footer>
         <p>2026 - Jakub Czapnik. Zadanie MB3 z przedmiotu Programowanie aplikaji zaawansowanych webowych.</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
