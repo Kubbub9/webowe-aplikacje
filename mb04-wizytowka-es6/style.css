@@ -203,3 +203,16 @@ body.ciemny #komunikat.blad {
 body.ciemny #komunikat.sukces {
     color: #7ee2a0;
 }
+
+#lista-umiejetnosci li{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+#lista-umiejetnosci .poziom{
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #0b5ed7;
+}
