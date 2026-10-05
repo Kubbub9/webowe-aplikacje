@@ -1,4 +1,9 @@
-const umiejetnosci = [
+/**
+ * Lista umiejętności prezentowanych na stronie.
+ *
+ * @type {Array<{nazwa: string, poziom: number, kategoria: string}>}
+ */
+export const umiejetnosci = [
     { nazwa: "HTML",            poziom: 4, kategoria: "frontend" },
     { nazwa: "CSS",             poziom: 3, kategoria: "frontend" },
     { nazwa: "JavaScript",      poziom: 3, kategoria: "frontend" },
