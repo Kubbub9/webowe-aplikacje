@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const PLIK = patj.join(import.meta.dirname, "zadania.jsom");
+const PLIK = path.join(import.meta.dirname, "zadania.jsom");
 
 export const wczytaj = async () => {
     try{
