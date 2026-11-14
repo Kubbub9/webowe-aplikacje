@@ -18,6 +18,17 @@ app.get("/", (req, res) => {
 app.get("/gry", (req, res) => {
     res.json(gry);
 })
+app.get("/gry/:id", (req, res) => {
+    const szukane = Number(req.params.id);
+    const gra = gry.find((g) => g.id === szukane);
+    
+    if(!gra){
+        res.status(404).json({blad: "Nie ma gry o takim numerze"});
+        return;
+    }
+
+    res.json(gra);
+})
 app.listen(PORT, () =>{
     console.log(`Serwer działa: http://localhost:${PORT}`);
 })
