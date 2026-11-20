@@ -1,6 +1,9 @@
 import express from "express"
 import {gry} from "./dane.js"
 import path from "node:path";
+import routerGier from "./trasy/gry.js";
+
+app.use("/gry", routerGier);
 
 const app = express();
 const PORT = 3000;
@@ -20,22 +23,6 @@ app.use(express.urlencoded({ extended: true}))
 
 app.use(express.static(path.join(import.meta.dirname, "public")));
 
-/** GET /gry - pełna lista gier w katalogu*/
-app.get("/gry", (req, res) => {
-    res.json(gry);
-})
-/** GET /gry/:id - jedna gra o podanym numerze; 404, gdy nie ma*/
-app.get("/gry/:id", (req, res) => {
-    const szukane = Number(req.params.id);
-    const gra = gry.find((g) => g.id === szukane);
-    
-    if(!gra){
-        res.status(404).json({blad: "Nie ma gry o takim numerze"});
-        return;
-    }
-
-    res.json(gra);
-})
 /** GET /szukaj?wydawca=&max=&gracze= - filtrowanie katalogu; brak parametru = cała lista*/
 app.get("/szukaj", (req, res) => {
     const { wydawca, max, gracze } = req.query;
@@ -73,8 +60,8 @@ app.get("/statystyki", (req, res) =>{
 app.post("/echo", (req, res) => {
     console.log(req.body);
     res.json({odebrano: req.body})
-}
-)
+})
+
 
 app.listen(PORT, () =>{
     console.log(`Serwer działa: http://localhost:${PORT}`);
